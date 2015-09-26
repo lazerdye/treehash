@@ -1,3 +1,4 @@
+import os
 from distutils.core import setup
 
 setup(
@@ -7,7 +8,7 @@ setup(
     scripts=['bin/treehash'],
     license="Simplified BSD",
     description="Tree Hash Calculator",
-    long_description=open('README.rst').read(),
+    long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     url="http://github.com/jdswinbank/treehash",
     author="John Swinbank",
     author_email="john@treehash.swinbank.org"
