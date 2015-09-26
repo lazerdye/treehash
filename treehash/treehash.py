@@ -29,6 +29,8 @@ class TreeHash(object):
         extra = self.pending.read()
         if extra:
             to_recurse.append(self.algo(extra))
+	elif len(to_recurse) == 0:
+          to_recurse.append(self.algo(""))
         return recursive_hash(to_recurse)
 
     def update(self, data):
